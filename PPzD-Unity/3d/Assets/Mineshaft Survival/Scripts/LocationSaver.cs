@@ -52,7 +52,7 @@ public class LocationSaver : MonoBehaviour {
         Pos.Set(Xpos, Ypos, Zpos);
         transform.position = Pos;
 
-        Debug.Log("Loaded " + transform.name + "'s Location " + Xpos + " " + Ypos + " " + Zpos);
+//        Debug.Log("Loaded " + transform.name + "'s Location " + Xpos + " " + Ypos + " " + Zpos);
     }
 
 
@@ -68,7 +68,7 @@ public class LocationSaver : MonoBehaviour {
         PlayerPrefs.SetFloat("Zpos" + ObjID, Zpos);
 
         PlayerPrefs.Save();
-        Debug.Log("Saved " + transform.name +  "'s Location " + Xpos + " " + Ypos + " " + Zpos);
+//        Debug.Log("Saved " + transform.name +  "'s Location " + Xpos + " " + Ypos + " " + Zpos);
     }
 
 
@@ -106,7 +106,7 @@ public class LocationSaver : MonoBehaviour {
         Rot = Quaternion.Euler(Xrot, Yrot, Zrot);
         transform.rotation = Rot;
 
-        Debug.Log("Loaded " + transform.name + "'s Rotation " + Xrot + " " + Yrot + " " + Zrot);
+//        Debug.Log("Loaded " + transform.name + "'s Rotation " + Xrot + " " + Yrot + " " + Zrot);
     }
 
 
@@ -122,7 +122,7 @@ public class LocationSaver : MonoBehaviour {
         PlayerPrefs.SetFloat("Zrot" + ObjID, Zrot);
 
         PlayerPrefs.Save();
-        Debug.Log("Saved " + transform.name + "'s Rotation " + Xrot + " " + Yrot + " " + Zrot);
+//        Debug.Log("Saved " + transform.name + "'s Rotation " + Xrot + " " + Yrot + " " + Zrot);
     }
 
 
