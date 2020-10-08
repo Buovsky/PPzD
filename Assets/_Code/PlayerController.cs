@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+#pragma warning disable CS0649
+
 public class PlayerController : MonoBehaviour {
     [SerializeField] Bandit banditController;
     [SerializeField] PlayerSubsystem[] subsystems;

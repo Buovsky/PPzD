@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#pragma warning disable CS0649
+using UnityEngine;
 
 public class CameraController : MonoBehaviour {
     [SerializeField] Transform target;

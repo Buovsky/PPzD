@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
+#pragma warning disable CS0649
+
 public class Bandit : MonoBehaviour {
     public event Action AttackedEvent = delegate { };
     public event Action DiedEvent = delegate { };
@@ -20,6 +22,8 @@ public class Bandit : MonoBehaviour {
     bool m_combatIdle;
     bool m_isDead;
 
+    float postAttackCooldown;
+
 
     // Update is called once per frame
     void Update() {
@@ -37,7 +41,7 @@ public class Bandit : MonoBehaviour {
         }
 
         // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
+        var inputX = postAttackCooldown <= 0 ? Input.GetAxis("Horizontal") : 0;
 
         // Swap direction of sprite depending on walk direction
         if (inputX > 0)
@@ -50,6 +54,9 @@ public class Bandit : MonoBehaviour {
 
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
+
+        if (postAttackCooldown > 0)
+            postAttackCooldown -= Time.deltaTime;
 
         // -- Handle Animations --
         //Death
@@ -70,8 +77,9 @@ public class Bandit : MonoBehaviour {
             m_animator.SetTrigger("Hurt");
 
         //Attack
-        else if (Input.GetMouseButtonDown(0)) {
+        else if (Input.GetMouseButtonDown(0) && postAttackCooldown <= 0) {
             m_animator.SetTrigger("Attack");
+            postAttackCooldown = 0.9f;
             AttackedEvent();
         }
 

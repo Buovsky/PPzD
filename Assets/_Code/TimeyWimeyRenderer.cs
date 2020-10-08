@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+#pragma warning disable CS0649
 
 public class TimeyWimeyRenderer : MonoBehaviour {
     [SerializeField] SpriteRenderer spriteRenderer;

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+#pragma warning disable CS0649
+
 
 public class UiPanelsManager : MonoBehaviour {
     UiPanel mainPanel;
@@ -84,6 +86,7 @@ public abstract class UiPanel : MonoBehaviour {
     public void Initialise() {
         if (initialised)
             return;
+        initialised = true;
         OnInitialise();
     }
 
