@@ -3,8 +3,10 @@
 public static class Input {
     public static bool IsLocked { get; set; }
 
-    public static bool GetKeyDown(KeyCode key) {
-        return !IsLocked && UnityEngine.Input.GetKeyDown(key);
+    public static bool GetKeyDown(KeyCode key, bool ignoreLock = false) {
+        if (!ignoreLock && IsLocked)
+            return false;
+        return UnityEngine.Input.GetKeyDown(key);
     }
 
     public static bool GetKeyDown(string keyName) {

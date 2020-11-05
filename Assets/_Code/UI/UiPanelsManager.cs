@@ -19,11 +19,12 @@ public class UiPanelsManager : MonoBehaviour {
         foreach (var panel in nestedPanels) {
             panel.Initialise();
             panel.WindowOpenedEvent += HandlePanelOpened;
+            panel.WindowClosedEvent += HandlePanelClosed;
         }
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape, true)) {
             Debug.Log("Escape pressed");
             if(!mainPanel.IsOpen)
                 mainPanel.Open();
@@ -37,6 +38,11 @@ public class UiPanelsManager : MonoBehaviour {
         openedPanels.Push(panel);
         Input.IsLocked = true;
         UnlockCursor();
+    }
+
+    void HandlePanelClosed(UiPanel panel) {
+        if (openedPanels.Contains(panel))
+            openedPanels.Pop();
     }
 
     public void CloseCurrentPanel() {
