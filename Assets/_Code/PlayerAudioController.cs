@@ -13,8 +13,6 @@ public class PlayerAudioController : PlayerSubsystem {
                 break;
             case PlayerEventType.Death:
                 break;
-            case PlayerEventType.Recovery:
-                break;
             case PlayerEventType.Attack:
                 break;
             case PlayerEventType.Footstep:
