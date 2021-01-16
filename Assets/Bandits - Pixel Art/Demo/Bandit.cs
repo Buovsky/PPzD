@@ -10,6 +10,8 @@ public class Bandit : MonoBehaviour {
     public event Action LandedEvent = delegate { };
     public event Action FootstepEvent = delegate { };
     public event Action AttackHitEvent = delegate { };
+    public event Action BlockEvent = delegate { };
+    public event Action DamageEvent = delegate { };
 
 
     [SerializeField] float m_speed = 1.0f;
@@ -107,6 +109,7 @@ public class Bandit : MonoBehaviour {
             m_combatIdle = true;
             postBlockCooldown = 1f;
             blockTimer = blockDuration;
+            BlockEvent();
         }
         //Run
         if (Mathf.Abs(inputX) > Mathf.Epsilon)
@@ -133,6 +136,7 @@ public class Bandit : MonoBehaviour {
             DiedEvent();
         } else {
             m_animator.SetTrigger("Hurt");
+            DamageEvent();
         }
     }
 

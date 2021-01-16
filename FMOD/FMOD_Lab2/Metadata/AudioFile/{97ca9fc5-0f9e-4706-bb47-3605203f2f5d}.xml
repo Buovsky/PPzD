@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{97ca9fc5-0f9e-4706-bb47-3605203f2f5d}">
+		<property name="assetPath">
+			<value>Enemy/Enemy 2 (damaged).mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.67918367346938779</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cf176745-8888-4028-96b0-f8c147e47392}</destination>
+		</relationship>
+	</object>
+</objects>

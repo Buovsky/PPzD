@@ -342,7 +342,7 @@ RectTransform:
   m_Children:
   - {fileID: 1996852493}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -959,7 +959,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &309862192
 GameObject:
@@ -2115,7 +2115,7 @@ Transform:
   - {fileID: 1749396628}
   - {fileID: 1030994767}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &607620997
 MonoBehaviour:
@@ -4623,7 +4623,7 @@ Transform:
   m_Children:
   - {fileID: 1472155035}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1109593965
 MonoBehaviour:
@@ -4638,6 +4638,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2048055995}
+--- !u!1 &1116743326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000535602403704152, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1000535601890918354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1116743328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116743326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!4 &1132666766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4375065221924998, guid: 530a84f7d3089ef458b6a611d6fa8f00,
@@ -6321,7 +6341,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472155032}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1472155034
 Camera:
   m_ObjectHideFlags: 0
@@ -6636,6 +6656,56 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1499475509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499475511}
+  - component: {fileID: 1499475510}
+  m_Layer: 0
+  m_Name: BankLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1499475510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499475509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Player
+  - Enemy
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!4 &1499475511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499475509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4242326, y: 0.3126985, z: -0.69623005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1509621512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6805,7 +6875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577166702
 GameObject:
@@ -8694,7 +8764,7 @@ Transform:
   - {fileID: 1989285167}
   - {fileID: 930264446}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1945211201
 PrefabInstance:
@@ -9704,6 +9774,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1000535602403704152, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventJumpAudio
+      value: event:/PlayerEvents/PlayerJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventLandingAudio
+      value: event:/PlayerEvents/PlayerLand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventDeathAudio
+      value: event:/PlayerEvents/PlayerDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventAttackAudio
+      value: event:/PlayerEvents/PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventFootsteepAudio
+      value: event:/PlayerEvents/PlayerFootsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventBlockAudio
+      value: event:/PlayerEvents/PlayerBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventDamageAudio
+      value: event:/PlayerEvents/PlayerDamaged
+      objectReference: {fileID: 0}
     - target: {fileID: 1000535602527216997, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
         type: 3}
       propertyPath: m_Name
@@ -9747,7 +9857,7 @@ PrefabInstance:
     - target: {fileID: 1000535602527217001, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1000535602527217001, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
         type: 3}

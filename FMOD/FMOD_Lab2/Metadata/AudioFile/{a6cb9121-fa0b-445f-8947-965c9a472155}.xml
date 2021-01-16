@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{a6cb9121-fa0b-445f-8947-965c9a472155}">
+		<property name="assetPath">
+			<value>Enemy/swordSwing.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.31346938775510202</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cf176745-8888-4028-96b0-f8c147e47392}</destination>
+		</relationship>
+	</object>
+</objects>
