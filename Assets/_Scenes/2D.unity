@@ -957,7 +957,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.652765, y: -38.691814, z: -36.576466}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1829152722}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1909,6 +1910,151 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7260daea76a42f4f84d25a99820372e, type: 3}
+--- !u!1 &588380980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588380983}
+  - component: {fileID: 588380982}
+  - component: {fileID: 588380986}
+  - component: {fileID: 588380981}
+  - component: {fileID: 588380985}
+  - component: {fileID: 588380984}
+  m_Layer: 0
+  m_Name: AmbienceAudioTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &588380981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588380980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178cfa61d6708b74eaaea2020f1d4546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventAudioBirds: event:/AmbienceMusic/Birds
+  eventAudioWind: event:/AmbienceMusic/Wind
+  eventAudioCrikets: event:/AmbienceMusic/Crikets
+--- !u!61 &588380982
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588380980}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.97, y: 4.03}
+  m_EdgeRadius: 0
+--- !u!4 &588380983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588380980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.013, y: 0.123102106, z: -1.4028759}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588380984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588380980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: snapshot:/OutForestSnapshot
+  PlayEvent: 6
+  StopEvent: 5
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &588380985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588380980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: snapshot:/InForestSnapshot
+  PlayEvent: 5
+  StopEvent: 6
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &588380986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588380980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/AmbienceMusic/Music
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &588486766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3371,6 +3517,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 530a84f7d3089ef458b6a611d6fa8f00, type: 3}
+--- !u!114 &920790179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 899195886700026663, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1000535601890918354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8b435a8dc3f604e9a13c4acd7081c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &930264445
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,6 +6848,7 @@ MonoBehaviour:
   Banks:
   - Player
   - Enemy
+  - Ambience&Music
   CollisionTag: 
   PreloadSamples: 0
 --- !u!4 &1499475511
@@ -6875,7 +7034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577166702
 GameObject:
@@ -8418,6 +8577,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 385e8fc21b54a0d428bb9da7e1321650, type: 3}
+--- !u!1 &1829152721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829152722}
+  - component: {fileID: 1829152723}
+  m_Layer: 0
+  m_Name: DayNightSnapshotController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829152722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829152721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 302860870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829152723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829152721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2824430536f78746bd4a186c0c2a819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapshotDay: snapshot:/DaySnapshot
+  snapshotDaySunset: snapshot:/SunsetSnapshot
+  snapshotDayNight: snapshot:/NightSnapshot
 --- !u!1001 &1831807161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8764,7 +8969,7 @@ Transform:
   - {fileID: 1989285167}
   - {fileID: 930264446}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1945211201
 PrefabInstance:
@@ -9774,6 +9979,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 899195886700026663, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1000535602403704152, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
         type: 3}
       propertyPath: m_Name
@@ -9814,10 +10024,30 @@ PrefabInstance:
       propertyPath: eventDamageAudio
       value: event:/PlayerEvents/PlayerDamaged
       objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: eventLowLifeAudio
+      value: event:/PlayerEvents/PlayerLowLife
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: banditController
+      value: 
+      objectReference: {fileID: 920790179}
+    - target: {fileID: 1000535602403704153, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: snapshotLowLifeAudio
+      value: snapshot:/LowLife
+      objectReference: {fileID: 0}
     - target: {fileID: 1000535602527216997, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
         type: 3}
       propertyPath: m_Name
       value: PlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000535602527216997, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1000535602527217001, guid: 75390d8c5e81e8b4d8a3e1b42c7a3c27,
         type: 3}

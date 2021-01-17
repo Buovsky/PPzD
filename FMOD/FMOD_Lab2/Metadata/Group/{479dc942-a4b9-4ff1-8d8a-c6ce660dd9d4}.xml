@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{479dc942-a4b9-4ff1-8d8a-c6ce660dd9d4}">
+		<property name="name">
+			<value>LowLifeTarget</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{9c3e165c-3d0b-4f83-93e7-cf21dcfc56b4}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{e12a7a7d-3f1b-4015-ad77-8564ada97a49}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{e912ca8b-d722-4873-9b21-9915f6fecce5}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{9c3e165c-3d0b-4f83-93e7-cf21dcfc56b4}">
+		<relationship name="effects">
+			<destination>{6a0658f0-9d89-46f2-9173-26eedb8aad42}</destination>
+			<destination>{d89aa40c-d87e-49f7-864c-0d97354b6fb7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{e12a7a7d-3f1b-4015-ad77-8564ada97a49}" />
+	<object class="LowpassEffect" id="{6a0658f0-9d89-46f2-9173-26eedb8aad42}" />
+	<object class="MixerBusFader" id="{d89aa40c-d87e-49f7-864c-0d97354b6fb7}" />
+</objects>

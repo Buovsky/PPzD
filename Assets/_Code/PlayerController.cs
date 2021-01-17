@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour {
         banditController.FootstepEvent += () => NotifySubsystemsAboutNewEvent(PlayerEventType.Footstep);
         banditController.BlockEvent += () => NotifySubsystemsAboutNewEvent(PlayerEventType.Block);
         banditController.DamageEvent += () => NotifySubsystemsAboutNewEvent(PlayerEventType.Damage);
+        banditController.LowLifeEvent += () => NotifySubsystemsAboutNewEvent(PlayerEventType.LowLife);
         banditController.AttackHitEvent += CheckForTargetsAndHit;
         input = new PlayerInput();
         banditController.Setup(input);
@@ -72,5 +73,6 @@ public enum PlayerEventType {
     Attack,
     Footstep,
     Block,
-    Damage
+    Damage,
+    LowLife
 }

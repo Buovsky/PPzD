@@ -290,8 +290,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Ambience
-  - AmbienceForest
+  - Ambience&Music
   - Enemy
   - Player
   BanksToLoad:

@@ -12,6 +12,7 @@ public class Bandit : MonoBehaviour {
     public event Action AttackHitEvent = delegate { };
     public event Action BlockEvent = delegate { };
     public event Action DamageEvent = delegate { };
+    public event Action LowLifeEvent = delegate { };
 
 
     [SerializeField] float m_speed = 1.0f;
@@ -31,7 +32,7 @@ public class Bandit : MonoBehaviour {
     float postAttackCooldown;
     float postBlockCooldown;
     float blockTimer;
-    float currentHealth;
+    public float currentHealth;
 
     ICharacterInput input;
 
@@ -137,6 +138,11 @@ public class Bandit : MonoBehaviour {
         } else {
             m_animator.SetTrigger("Hurt");
             DamageEvent();
+            if (currentHealth <= 30)
+            {
+                LowLifeEvent();
+            }
+                
         }
     }
 
